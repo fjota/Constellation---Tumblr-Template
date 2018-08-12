@@ -293,8 +293,17 @@
   </footer>
   <script>
     /* Navigation */
+    var menu_mobile_s = window.matchMedia("(max-width: 320px)");
+    var menu_mobile = window.matchMedia("(max-width: 425px)");
     function openNav() {
-      document.getElementById("mySidenav").style.width = "400px";
+      if (menu_mobile) {
+        document.getElementById("mySidenav").style.width = "300px"; 
+      } 
+      else if (menu_mobile_s) {
+        document.getElementById("mySidenav").style.width = "380px"; 
+      } else {
+        document.getElementById("mySidenav").style.width = "400px";
+      }
     }
 
     function closeNav() {
