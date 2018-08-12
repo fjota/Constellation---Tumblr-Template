@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Constellation - Posts</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <!-- Side navigation -->
+    <div id="mySidenav" class="sidenav">
+      <div class="side-nav-wrapper">
+        <span class="closebtn icon-close" onclick="closeNav()"></span>
+        <div class="welcome-nav-container">
+          <h4>Hello,</h4>
+          <p>Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.</p>
+          <p>Pellentesque facilisis. Nulla imperdiet sit amet magna.</p>
+        </div>
+        <div class="social-media-container media-menu">
+          <span class="icon-dribbble"></span>
+          <span class="icon-linkedin"></span>
+          <span class="icon-instagram"></span>
+          <span class="icon-twitter"></span>
+        </div>
+        <nav class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="">Posts</a>
+            </li>
+            <li>
+              <a href="">Gallery</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Header Tools -->
+    <div class="content-container header-tools">
+      <span class="icon-hamburger-menu" onclick="openNav()"></span>
+      <div class="search-container" id="search-control" onclick="openSearch()">
+        <span class="icon-search"></span>
+        <span>Search...</span>
+      </div>
+      <!-- Search Full -->
+      <div id="search-full" class="search-full-container">
+        <div class="content-container">
+          <div class="search-full-container-content">
+            <form action="">
+              <input type="text" placeholder="Type something..." name="">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner -->
+    <div class="content-container main-banner">
+      <div class="social-media-container">
+        <span class="icon-dribbble"></span>
+        <span class="icon-linkedin"></span>
+        <span class="icon-instagram"></span>
+        <span class="icon-twitter"></span>
+      </div>
+      <h1>CONSTELLATION</h1>
+      <p>If I create from the heart, nearly everything works; if from the head, almost nothing.</p>
+    </div>
+  </header>
+  <main>
+    <div class="content-container">
+      <!-- Single Post Container -->
+      <div class="post-content-container">
+        <div class="image-card">
+          <img src="img/post-image.png" alt="">
+        </div>
+        <div class="wrapper-post-center">
+          <div class="text-card">
+            <div class="tags">
+              <span>#design</span>
+              <span>#inspirations</span>
+            </div>
+            <p>Good ideas rarely come in bunches. The designer who voluntarily presents his client with a batch of layouts does
+              so not out prolificacy, but out of uncertainty or fear.</p>
+            <footer class="card-post-footer-single">
+              <span>01 August 2014 /
+                <span>2 Comment</span>
+              </span>
+              <div class="share-items">
+                <span class="icon-email"></span>
+                <span class="icon-facebook"></span>
+                <span class="icon-twitter"></span>
+              </div>
+            </footer>
+          </div>
+          <!-- Next.. -->
+          <nav class="navigation-post">
+            <ul>
+              <li>
+                <a href="">previous post</a>
+              </li>
+              <li>
+                <a href="">next post</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Code Section -->
+          <div class="section-embed-code">
+            <h5>Embed Code</h5>
+            <textarea name="" id="" cols="30" rows="5">
+              <h3>VAGNER HERNANDEZ</h3><p class="imgC" ><a href="http://elpassion.com/post/97850349571"><img src="http://38.media.tumblr.com/6fd0334606ad04b061abda2d462d3f2c/tumblr_nc2n0tAsmp1r46py4o1_1280.jpg" /></a></p>
+            </textarea>
+          </div>
+          <!-- Reblogged Section -->
+          <div class="reblogged-container">
+            <div class="item-reblogged">
+              <span class="icon-rectangle"></span>
+              <p>
+                <span>bj_unoxx</span>
+                reblogged this from 
+                <span>constellation</span>
+              </p>
+            </div>
+            <div class="item-reblogged">
+              <span class="icon-rectangle"></span>
+              <p>
+                <span>bj_unoxx</span>
+                reblogged this from 
+                <span>constellation</span>
+              </p>
+            </div>
+            <div class="item-reblogged">
+              <span class="icon-rectangle"></span>
+              <p>
+                <span>bj_unoxx</span>
+                reblogged this from 
+                <span>constellation</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="content-container">
+      <div class="social-media-container">
+        <span class="icon-dribbble"></span>
+        <span class="icon-linkedin"></span>
+        <span class="icon-instagram"></span>
+        <span class="icon-twitter"></span>
+      </div>
+      <p>Made with love at EL Passion 2014</p>
+      <p>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script>
+    /* Navigation */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "400px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    /* Search */
+    var search_icon = document.getElementById("search-control");
+
+    search_icon.addEventListener("click", toggleSerach);
+
+    function toggleSerach() {
+      document.getElementById("search-full").classList.toggle("active-search");
+      search_icon.classList.toggle("active-search-close");
+      document.body.classList.toggle("opened");
+    }  
+  </script>
+</body>
+
+</html>

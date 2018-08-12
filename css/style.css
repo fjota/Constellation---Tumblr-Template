@@ -1,0 +1,498 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-image: url("../img/Constellation.png"); */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+.content-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-media-container span {
+  margin-right: 2em;
+}
+
+                                          /* HOME PAGE STYLES */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?6kksoq');
+  src:  url('../fonts/icomoon.eot?6kksoq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?6kksoq') format('truetype'),
+    url('../fonts/icomoon.woff?6kksoq') format('woff'),
+    url('../fonts/icomoon.svg?6kksoq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rectangle:before {
+  content: "\e909";
+  color: #f5f5f5;
+}
+.icon-email:before {
+  content: "\e900";
+  color: #c8c8c8;
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-dribbble:before {
+  content: "\e902";
+  color: #a7a7a7;
+}
+.icon-facebook:before {
+  content: "\e903";
+  color: #c8c8c8;
+}
+.icon-hamburger-menu:before {
+  content: "\e904";
+}
+.icon-instagram:before {
+  content: "\e905";
+  color: #a7a7a7;
+}
+.icon-linkedin:before {
+  content: "\e906";
+  color: #a7a7a7;
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-twitter:before {
+  content: "\e908";
+  color: #c8c8c8;
+}
+                                          
+
+/* Header Styles */
+.main-header {
+  background: url("../img/Constellation.png");
+}
+
+.main-header .content-container.header-tools {
+  width: 100%;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.header-tools {
+  height: 28px;
+}
+
+.header-tools > span {
+  font-weight: 600;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-container span {
+  margin-right: 1em;
+  font-weight: 500;
+}
+
+.search-container span::before {
+  font-weight: 600;
+}
+
+.search-container:hover span::before,
+.search-container:hover span {  
+  color: #15D698;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #181818;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.sidenav .side-nav-wrapper {
+  width: 80%;
+  height: 100%;  
+  overflow: hidden;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+}
+
+.sidenav .welcome-nav-container {
+  width: 75%;
+}
+
+.sidenav h4 {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 4em;
+  margin-bottom: .5em;
+}
+
+.sidenav p {
+  color: #818181;
+  margin: 0;
+}
+
+.welcome-nav-container p:nth-of-type(2) {
+  margin-top: 1.5em;
+}
+
+.sidenav .social-media-container {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.media-menu.social-media-container .icon-instagram:before {
+  color: #15D698;
+}
+
+.main-menu {
+  border-top: 1px solid #2C2C2C;
+}
+
+.main-menu ul {
+  padding: 0;
+  margin-top: 2em;
+}
+
+.main-menu li {
+  margin: 1.5em 0 1.5em 0;
+}
+
+.main-menu a {
+  color: white;
+  font-size: 1.4em;
+}
+
+.main-banner {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.main-banner .social-media-container span:hover::before {
+  color: #16D598;
+}
+
+.main-banner h1 {
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: .4em;
+}
+
+.main-banner p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #8F8F8F;
+}
+
+
+/* Posts Style */
+
+main {
+  margin-top: 5em;
+}
+
+.posts-view-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.view-post {
+  width: 100%;
+  height: 450px;
+}
+
+.view-post > a {
+  display: block; 
+  height: 90%; 
+  margin-bottom: .5em;
+}
+
+.view-post img {
+  width: 100%;
+  height: 100%; 
+}
+
+.view-post .message-day {
+  width: 100%;
+  height: 90%; 
+  margin-bottom: .5em;
+}
+
+.view-post .message-day {
+  position: relative;
+}
+
+.view-post .message-day span {
+  color: #15D698;
+}
+
+.view-post .message-day a {
+  position: absolute;
+  bottom: 0;
+  font-size: 2em;
+  color: black;
+}
+
+.card-post-footer {
+  height: 10%;
+  border-top: 1px solid #DADADA;
+  padding-top: .5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-post-footer span {
+  font-size: .9em;
+}
+
+.card-post-footer span > span {
+  color: #16D598;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 4em;
+  border: 1px solid #DADADA;
+}
+
+.load-more-container a {
+  display: block;
+  color: #818181;
+  padding: 1.5em;
+}
+
+.load-more-container a:hover {
+  color: #15D698;
+}
+
+/* Footer Styles */
+.main-footer {
+  margin-top: 5em;
+  text-align: center;
+}
+
+/* Search Full Styles */
+.search-full-container {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-full-container .content-container {
+  height: 100%;
+  width: 100%;
+}
+
+.search-full-container-content {
+  position: relative;
+  top: 20%;
+  height: 100%;
+  width: 100%;
+}
+
+.search-full-container-content form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.search-full-container input {
+  font-size: 1.2em;
+  border: none;
+  width: 80%;    
+  border: none;
+  display: block;
+  padding: 1em .7em 1em 2.5em;
+  background-color: transparent;
+  background: url(../img/search-icon.svg) no-repeat center left 12px/1.2rem, url(../img/return-icon.svg) no-repeat center right 12px/1.2rem;
+  border-bottom: 1px solid #000000;
+}
+
+.search-full-container input:focus {
+  outline: none;
+}
+
+.active-search {
+  display: block;
+}
+
+.active-search-close {
+  z-index: 2;
+}
+
+.opened {
+  overflow: hidden;
+}
+
+
+                                            /* POSTS PAGE STYLES */
+
+/* Main Content Styles  */
+
+main .post-content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.post-content-container .image-card {
+  display: flex;
+  justify-content: center;
+}
+
+.post-content-container .image-card img {
+  width: 80%;
+  height: 30%;
+}
+
+.wrapper-post-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-content-container .text-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.post-content-container .text-card .tags {
+  width: 45%;
+  text-align: left;
+}
+
+.post-content-container .text-card p {
+  width: 45%;
+  text-align: left;
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5em;
+  font-style: italic;
+}
+
+.text-card span {
+  color: #15D698;
+  margin-right: .5em;
+}
+
+.card-post-footer-single {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5em;
+}
+
+.card-post-footer-single span {
+  color: black;
+  font-size: .9em;
+}
+
+.navigation-post {
+  width: 45%;
+  border-top: 1px solid #F5F5F5;
+}
+
+.navigation-post ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-post a {
+  color: #15D698;
+}
+
+.section-embed-code {
+  margin-top: 3.5em;
+  text-align: left;
+  width: 45%;
+  font-size: 1.2em;
+}
+
+.section-embed-code textarea {
+  width: 100%;
+  border: 1px solid #F5F5F5;
+  resize: none;
+  outline: none;
+}
+
+.reblogged-container {
+  width: 45%;
+  margin-top: 1em;
+}
+
+.reblogged-container .item-reblogged {
+  display: flex;
+  align-items: center;
+}
+
+.item-reblogged span {
+  color: #16D598;
+  font-size: 1.2em;
+}
+
+.item-reblogged p {
+  margin-left: .5em;
+}
+
+
+
